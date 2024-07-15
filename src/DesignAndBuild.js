@@ -33,7 +33,6 @@ function DesignAndBuild() {
     });
   }, []);
 
-  const [videoLoaded, setVideoLoaded] = useState(false);
   const [isOpen,setIsOpen] = useState(false)
   const setNav =(menu)=>{
     setIsOpen(menu)
