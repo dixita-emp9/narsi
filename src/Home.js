@@ -380,7 +380,7 @@ function Home() {
                   </div>
                 </Marquee>
                 </div>
-                <div className="marquee-container" data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true">
+                <div className="marquee-container" data-aos-delay="400" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true">
                 <Marquee speed={100} direction={"right"} autoFill={true} className="marquee-container mt-4" data-aos-delay="400" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true">
 
                   <div className='d-flex justify-content-around'>
