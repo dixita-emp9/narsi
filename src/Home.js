@@ -227,8 +227,8 @@ function Home() {
                   <div className='col-lg-6 ' style={{ textAlign: 'justify' }}>
                     <h1 className="custom-heading about-dsn" data-aos="fade-up" data-aos-once="true">About Us</h1>
                     <div className='bd-r'>
-                      <p> At Narsi, we lead the industry with our innovative approach to crafting top-tier interiors. With a dedication to "Building Inspirational Spaces," we blend traditional craftsmanship with modern techniques to create unique and creative projects.</p>
-                      <p className='mg-0'>Wood is at the heart of our philosophy, chosen for its timeless beauty. We prioritise the well-being and growth of our employees, recognizing them as invaluable assets. With over  1400 completed projects, including notable clients like The New Parliament Building and Mastercard, our track record speaks for itself in delivering unparalleled value across various sectors.</p>
+                      <p data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true"> At Narsi, we lead the industry with our innovative approach to crafting top-tier interiors. With a dedication to "Building Inspirational Spaces," we blend traditional craftsmanship with modern techniques to create unique and creative projects.</p>
+                      <p className='mg-0' data-aos-delay="400" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true">Wood is at the heart of our philosophy, chosen for its timeless beauty. We prioritise the well-being and growth of our employees, recognizing them as invaluable assets. With over  1400 completed projects, including notable clients like The New Parliament Building and Mastercard, our track record speaks for itself in delivering unparalleled value across various sectors.</p>
 
                     </div>
                   </div>
