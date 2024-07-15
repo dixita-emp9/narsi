@@ -57,7 +57,6 @@ const OverlayNav = () => {
                   <h6 className='mt-2 mb-0 text-uppercase'>Contact</h6>
                   <p className=''>Mail@narsi.in <br></br> Tel.: +91 22-42505555<br></br> Fax.: +91 22-42505577</p>
 
-
                 </div>
               </div>
             </div>
