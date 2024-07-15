@@ -236,7 +236,7 @@ function Home() {
                     <div className='row text-center'>
                       <div className='col-6'>
                         <CountUpAnimation
-                          timeout={800}
+                          timeout={3000}
                           initialValue={140}
                           targetValue={ 700}
                           prefix={"+"}
@@ -245,7 +245,7 @@ function Home() {
                       </div>
                       <div className='col-6'>
                         <CountUpAnimation
-                          timeout={2000}
+                          timeout={3000}
                           initialValue={0}
                           targetValue={99}
                           prefix={"m+"}
@@ -254,7 +254,7 @@ function Home() {
                       </div>
                       <div className='col-6 mt-5'>
                         <CountUpAnimation
-                          timeout={1000}
+                          timeout={3000}
                           initialValue={0}
                           targetValue={23}
                           prefix={"m+"}
@@ -263,7 +263,7 @@ function Home() {
                       </div>
                       <div className='col-6 mt-5'>
                         <CountUpAnimation
-                          timeout={1500}
+                          timeout={3000}
                           initialValue={0}
                           targetValue={6}
                           prefix={"m+"}
