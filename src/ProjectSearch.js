@@ -55,10 +55,15 @@ function Projectsearch() {
     }
   };
 
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [isOpen,setIsOpen] = useState(false)
+  const setNav =(menu)=>{
+    setIsOpen(menu)
+  }
   return (
-    <div>
-      <SmoothScroll />
-      <OverlayNav />
+    <div className={`body ${isOpen ? 'open' : ''}`}>
+      {/* <SmoothScroll /> */}
+      <OverlayNav setNav={(e)=>setNav(e)} />
       <LeftContainer />
       <div className='smoothScroll-container' >
         <div className='margin-container'>

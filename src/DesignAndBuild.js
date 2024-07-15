@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
 import OverlayNav from './components/NavHeader';
 import designBuildBanner from './images/designbuild-banner.jpg'
 import designImg from './images/design.jpg'
@@ -33,10 +33,16 @@ function DesignAndBuild() {
     });
   }, []);
 
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [isOpen,setIsOpen] = useState(false)
+  const setNav =(menu)=>{
+    setIsOpen(menu)
+  }
+
   return (
-    <div>
-      {/* <SmoothScroll /> */}
-      <OverlayNav />
+    <div className={`body ${isOpen ? 'open' : ''}`}>
+    {/* <SmoothScroll /> */}
+    <OverlayNav setNav={(e)=>setNav(e)} />
       <LeftContainer />
    
       <div className='smoothScroll-container' >

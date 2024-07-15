@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import OverlayNav from './components/NavHeader';
 import press1Img from './images/press1.jpg'
@@ -13,11 +14,18 @@ import SmoothScroll from "./SmoothScroll";
 
 
 function Press() {
+
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [isOpen,setIsOpen] = useState(false)
+  const setNav =(menu)=>{
+    setIsOpen(menu)
+  }
   return (
-    <div>
-      <SmoothScroll />
+
+    <div className={`body ${isOpen ? 'open' : ''}`}>
+      {/* <SmoothScroll /> */}
       <header >
-        <OverlayNav />
+      <OverlayNav setNav={(e)=>setNav(e)} />
       </header>
       <div className='container-fluid'>
         <div className='row bg-wood section justify-content-center'>

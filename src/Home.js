@@ -102,11 +102,14 @@ const CountUpAnimation = ({
 
 function Home() {
   const [videoLoaded, setVideoLoaded] = useState(false);
-
+  const [isOpen,setIsOpen] = useState(false)
+  const setNav =(menu)=>{
+    setIsOpen(menu)
+  }
   return (
-    <div>
+    <div className={`body ${isOpen ? 'open' : ''}`}>
       {/* <SmoothScroll /> */}
-      <OverlayNav />
+      <OverlayNav setNav={(e)=>setNav(e)} />
       <LeftContainer />
       <div className='smoothScroll-container'  >
         <div className='margin-container' >
