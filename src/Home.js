@@ -369,7 +369,7 @@ function Home() {
             <div className='row  justify-content-center section'>
               <div className='col-12 position-relative'>
                 <h1 className='mt-5 mb-5 pb-4 clients-title-dsn' data-aos="fade-up" data-aos-once="true" data-aos-offset="300">Clients</h1>
-                <Marquee speed={100} autoFill={true} className="marquee-container">
+                <Marquee speed={100} autoFill={true} className="marquee-container" data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true">
                   <div className='d-flex justify-content-around'>
                     {Object.entries(clientImages).slice(0, Math.ceil(Object.keys(clientImages).length / 2)).map(([key, value]) => (
                       <div key={key} className='client-logo'>
@@ -379,7 +379,7 @@ function Home() {
                   </div>
 
                 </Marquee>
-                <Marquee speed={100} direction={"right"} autoFill={true} className="marquee-container mt-4">
+                <Marquee speed={100} direction={"right"} autoFill={true} className="marquee-container mt-4" data-aos-delay="400" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true">
 
                   <div className='d-flex justify-content-around'>
                     {Object.entries(clientImages).slice(Math.ceil(Object.keys(clientImages).length / 2), Math.ceil(2 * Object.keys(clientImages).length / 2)).map(([key, value]) => (
@@ -423,7 +423,7 @@ function Home() {
               <div className='col-12'>
                 <h2 className='mt-5 mb-5 press-title-dsn' data-aos="fade-up" data-aos-once="true" data-aos-offset="300">Press</h2>
 
-                <div className='d-flex flex-row ' style={{ overflowX: "scroll" }}>
+                <div className='d-flex flex-row ' style={{ overflowX: "scroll" }} data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true">
                   <div className='col-md-4 col-4 press-card-dsn'>
                     <div className='press-card2'>
                       <img src={press1Img} />
