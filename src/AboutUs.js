@@ -65,21 +65,21 @@ function AboutUs() {
               <div className='col-lg-12 col-sm-12'>
                 <div className='row'>
                   <div className='col-lg-12 manuf-sec' >
-                    <h2  data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300" >About Us</h2>
+                    <h2 data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900" >About Us</h2>
                     <div className='manuf-facility d-flex flex-column'>
-                      <p className='inter-font'>At Narsi, we lead the industry with our innovative approach to crafting top-tier interiors. With a dedication to "Building Inspirational Spaces," we blend traditional craftsmanship with modern techniques to create unique and creative projects. </p>
-                      <p className='mt-2 inter-font'>Wood is at the heart of our philosophy, chosen for its timeless beauty. We prioritise the well-being and growth of our employees, recognizing them as invaluable assets. With over  1400 completed projects, including notable clients like The New Parliament Building and Mastercard, our track record speaks for itself in delivering unparalleled value across various sectors.</p>
+                      <p className='inter-font' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">At Narsi, we lead the industry with our innovative approach to crafting top-tier interiors. With a dedication to "Building Inspirational Spaces," we blend traditional craftsmanship with modern techniques to create unique and creative projects. </p>
+                      <p className='mt-2 inter-font' data-aos-delay="400" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="500">Wood is at the heart of our philosophy, chosen for its timeless beauty. We prioritise the well-being and growth of our employees, recognizing them as invaluable assets. With over  1400 completed projects, including notable clients like The New Parliament Building and Mastercard, our track record speaks for itself in delivering unparalleled value across various sectors.</p>
                     </div>
                   </div>
                 </div>
                 <div className='row'>
                   <div className='col-lg-5 manuf-sec' style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }} >
-                    <h2  data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-right" data-aos-once="true" data-aos-offset="300">Who We Are</h2>
+                    <h2  data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-right" data-aos-once="true" data-aos-offset="900">Who We Are</h2>
 
                   </div>
                   <div className='col-lg-7 manuf-sec d-flex flex-column'>
-                    <h2 className='text-upper' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-left" data-aos-once="true" data-aos-offset="300">Design. Develop. Deliver.</h2>
-                    <p className='inter-font'>We’re a design oriented, one-stop interior turnkey solutions
+                    <h2 className='text-upper' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-left" data-aos-once="true" data-aos-offset="500">Design. Develop. Deliver.</h2>
+                    <p className='inter-font' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-left" data-aos-once="true" data-aos-offset="500">We’re a design oriented, one-stop interior turnkey solutions
                       provider. A strong team of innovators and passionate individuals,
                       who are tech driven. We use state of the art manufacturing
                       technology, which makes us Industry 4.0 ready. Design & Build,
@@ -96,7 +96,7 @@ function AboutUs() {
 
             <header className='aboutus'>
               <Carousel showIndicators={false} showStatus={false} showArrows={false} showThumbs={false}>
-                <div>
+                <div data-aos-delay="0" data-aos-duration=" 1400" data-aos="zoom-in" data-aos-once="true" data-aos-offset="500">
                   <img src={aboutUsBanner2} />
                 </div>
               </Carousel>
@@ -106,8 +106,8 @@ function AboutUs() {
             <div className='row  section manuf-sec vision-dsn'>
               <div className='rect-container  row'>
                 <div className='col-lg-9 col-12'>
-                  <h4 className='mt-4' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">Our Vision</h4>
-                  <p className='inter-font'>To be a one-stop interior fitout service provider with a global reach with special emphasis on rigorours innovation to deliver premium quality at the best price and to be strong advocates of the 'Make in India' movement.</p>
+                  <h4 className='mt-4' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="1100">Our Vision</h4>
+                  <p className='inter-font' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="1100">To be a one-stop interior fitout service provider with a global reach with special emphasis on rigorours innovation to deliver premium quality at the best price and to be strong advocates of the 'Make in India' movement.</p>
                 </div>
                 <div className='col-lg-3 col-12  p-0'>
                   <img src={visionImg} />
@@ -115,8 +115,8 @@ function AboutUs() {
               </div>
               <div className='rect-container row'>
                 <div className='col-lg-9 col-12 '>
-                  <h4 className='mt-4' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">Our Mission</h4>
-                  <p className='inter-font'>Our mission statement embodies everything we stand for. The way we do our
+                  <h4 className='mt-4' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="1100">Our Mission</h4>
+                  <p className='inter-font' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="1100">Our mission statement embodies everything we stand for. The way we do our
                     business, our work culture, our passion for quality, our obsession with innovative
                     technologies, our commitment to our human resources and above all, our
                     dedication to provide customer delight and satisfaction, are all powered by our
@@ -128,8 +128,8 @@ function AboutUs() {
               </div>
               <div className='rect-container  row'>
                 <div className='col-lg-9 col-12'>
-                  <h4 className='mt-4' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">Our Strategy</h4>
-                  <p className='inter-font'>Using innovative methods and latest technology by investing in research and
+                  <h4 className='mt-4' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="1100">Our Strategy</h4>
+                  <p className='inter-font' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="1100">Using innovative methods and latest technology by investing in research and
                     development.</p>
                 </div>
                 <div className='col-lg-3 col-12 p-0'>
@@ -143,7 +143,7 @@ function AboutUs() {
               <div className='col-lg-12 col-sm-12'>
                 <div className='row'>
                   <div className='col-lg-12' >
-                    <h2 data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">Our Leadership</h2>
+                    <h2 data-aos-delay="1300" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="500">Our Leadership</h2>
                     {/* <div className='manuf-facility d-flex flex-column'>
                       <p>At Narsi, we lead the industry with our innovative approach to crafting top-tier interiors. With a dedication to "Building Inspirational Spaces," we blend traditional craftsmanship with modern techniques to create unique and creative projects. </p>
                       <p className='mt-2'>Wood is at the heart of our philosophy, chosen for its timeless beauty. We prioritise the well-being and growth of our employees, recognizing them as invaluable assets. With over  1400 completed projects, including notable clients like The New Parliament Building and Mastercard, our track record speaks for itself in delivering unparalleled value across various sectors.</p>
@@ -151,17 +151,17 @@ function AboutUs() {
                   </div>
                 </div>
                 <div className='row manuf-sec leadership'>
-                  <div className='col-lg-4 col-12' data-aos-delay="0" data-aos-duration=" 1400"  data-aos="fade-up" data-aos-once="true" data-aos-offset="300">
+                  <div className='col-lg-4 col-12' data-aos-delay="0" data-aos-duration=" 1400"  data-aos="fade-up" data-aos-once="true" data-aos-offset="1300">
                     <img className='rounded-corner-16 bordered' src={nkdImg} />
                     <h5 className='text-upper team-title'>Narsi D. Kularia</h5>
                     <p className='text-upper team-occu'>Managing Director</p>
                   </div>
-                  <div className='col-lg-4 col-12' data-aos-delay="200" data-aos-duration=" 1400"  data-aos="fade-up" data-aos-once="true" data-aos-offset="300">
+                  <div className='col-lg-4 col-12' data-aos-delay="200" data-aos-duration=" 1400"  data-aos="fade-up" data-aos-once="true" data-aos-offset="1300">
                     <img className='rounded-corner-16 bordered' src={jkImg} />
                     <h5 className='text-upper team-title'>Jagdish Kularia</h5>
                     <p className='text-upper team-occu'>Director</p>
                   </div>
-                  <div className='col-lg-4 col-12' data-aos-delay="400" data-aos-duration=" 1400"  data-aos="fade-up" data-aos-once="true" data-aos-offset="300">
+                  <div className='col-lg-4 col-12' data-aos-delay="400" data-aos-duration=" 1400"  data-aos="fade-up" data-aos-once="true" data-aos-offset="1300">
                     <img className='rounded-corner-16 bordered' src={azImg} />
                     <h5 className='text-upper team-title'>Aathis Zavar</h5>
                     <p className='text-upper team-occu'>CEO</p>
