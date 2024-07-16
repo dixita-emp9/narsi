@@ -63,7 +63,7 @@ function Projects() {
           <div className='container-fluid'>
             <div className='row justify-content-center section bg-wood'>
               <div className='col-lg-12 col-sm-12'>
-                <h2 className='mt-4 mb-5 projects' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">All Projects</h2>
+                <h2 className='mt-4 mb-5 projects' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">All Projects</h2>
                 <div className='row d-block d-sm-none'>
                   <Tabs defaultActiveKey="government" className="mb-3 projects-tab" orientation="vertical" >
                     <Tab eventKey="government" title="Government">
@@ -283,7 +283,9 @@ function Projects() {
 
             <div className='row  text-center section mb-5'>
               <div className='col-11 position-relative'>
-                <h2 className='mt-5 mb-5 d-flex align-self-start projects' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">Our Clientele</h2>
+                <h2 className='mt-5 mb-5 d-flex align-self-start projects' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">Our Clientele</h2>
+
+                <div className="marquee-container" data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">
                 <Marquee speed={100} autoFill={true} className="marquee-container">
                   <div className='d-flex justify-content-around'>
                     {Object.entries(clientImages).slice(0, Math.ceil(Object.keys(clientImages).length / 2)).map(([key, value]) => (
@@ -292,10 +294,11 @@ function Projects() {
                       </div>
                     ))}
                   </div>
-
                 </Marquee>
-                <Marquee speed={100} direction={"right"} autoFill={true} className="marquee-container mt-4">
+                </div>
 
+                <div className="marquee-container" data-aos-delay="400" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">
+                <Marquee speed={100} direction={"right"} autoFill={true} className="marquee-container mt-4">
                   <div className='d-flex justify-content-around'>
                     {Object.entries(clientImages).slice(Math.ceil(Object.keys(clientImages).length / 2), Math.ceil(2 * Object.keys(clientImages).length / 2)).map(([key, value]) => (
                       <div key={key} className='client-logo'>
@@ -303,8 +306,8 @@ function Projects() {
                       </div>
                     ))}
                   </div>
-
                 </Marquee>
+                </div>
               </div>
             </div>
 

@@ -64,9 +64,9 @@ function Manufacturing() {
               <div className='col-lg-12 col-sm-12'>
                 <div className='row'>
                   <div className='col-lg-6 manu-sec-dsn' style={{ borderRight: '1px solid #bbbbbb' }} >
-                    <h2 data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">Key features of our manufacturing facility</h2>
+                    <h2 data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">Key features of our manufacturing facility</h2>
                     <div className='manuf-facility d-flex flex-column mt-5'>
-                      <div className='d-flex justify-content-between' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">
+                      <div className='d-flex justify-content-between' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">
                         <div className='col-2'>
                           <img className='manuf-icon' src={industryIcon} />
                         </div>
@@ -75,7 +75,7 @@ function Manufacturing() {
                           <p className='inter-font'>Automation of manufacturing and industrial practices using the state of the art technology.</p>
                         </div>
                       </div>
-                      <div className='d-flex justify-content-between' data-aos-delay="400" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">
+                      <div className='d-flex justify-content-between' data-aos-delay="400" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">
                         <div className='col-2'>
                           <img className='manuf-icon' src={dataIcon} />
                         </div>
@@ -84,7 +84,7 @@ function Manufacturing() {
                           <p className='inter-font'>Realtime accumulation and analysis of data.</p>
                         </div>
                       </div>
-                      <div className='d-flex justify-content-between' data-aos-delay="600" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">
+                      <div className='d-flex justify-content-between' data-aos-delay="600" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">
                         <div className='col-2'>
                           <img className='manuf-icon' src={safetyIcon} />
                         </div>
@@ -93,7 +93,7 @@ function Manufacturing() {
                           <p className='inter-font'>All machines in our facilities are CE certified.</p>
                         </div>
                       </div>
-                      <div className='d-flex justify-content-between' data-aos-delay="800" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">
+                      <div className='d-flex justify-content-between' data-aos-delay="800" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">
                         <div className='col-2'>
                           <img className='manuf-icon' src={outpuIcon} />
                         </div>
@@ -102,7 +102,7 @@ function Manufacturing() {
                           <p className='inter-font'>Processing capacity of 50,000+ sq.ft of boards in a day.</p>
                         </div>
                       </div>
-                      <div className='d-flex justify-content-between' data-aos-delay="1000" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">
+                      <div className='d-flex justify-content-between' data-aos-delay="1000" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">
                         <div className='col-2'>
                           <img className='manuf-icon' src={innovIcon} />
                         </div>
@@ -114,10 +114,10 @@ function Manufacturing() {
                     </div>
                   </div>
                   <div className='col-lg-6 manu-sec-dsn d-flex flex-column' >
-                    <h2 data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">Sustainability</h2>
-                    <p className='inter-font' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">with an increase amount of attention on the enviornmental impact of every industry, we have adpoted effective sustainable methods : </p>
+                    <h2 data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">Sustainability</h2>
+                    <p className='inter-font' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">with an increase amount of attention on the enviornmental impact of every industry, we have adpoted effective sustainable methods : </p>
                     <div className='manuf-facility d-flex flex-column mt-5'>
-                      <div className='d-flex justify-content-between' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">
+                      <div className='d-flex justify-content-between' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">
                         <div className='col-2'>
                           <img className='manuf-icon' src={dustIcon} />
                         </div>
@@ -126,7 +126,7 @@ function Manufacturing() {
                           <p className='inter-font'>Automation of manufacturing and industrial practices using the state of the art technology.</p>
                         </div>
                       </div>
-                      <div className='d-flex justify-content-between' data-aos-delay="400" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">
+                      <div className='d-flex justify-content-between' data-aos-delay="400" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">
                         <div className='col-2'>
                           <img className='manuf-icon' src={dataDrivenIcon} />
                         </div>
