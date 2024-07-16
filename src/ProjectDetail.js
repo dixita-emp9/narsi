@@ -130,7 +130,7 @@ function ProjectDetail() {
           </div>
           <div className='pl-3 row section bg-wood justify-content-center project-detail-padding-dsn project-detail'>
             <div className='col-lg-12'>
-              <div className='row text-justify inter-font'>
+              <div className='row text-justify inter-font' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">
                 {project.des}
               </div>
               <div className='row mt-5 project-detail'>
