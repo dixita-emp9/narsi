@@ -350,8 +350,8 @@ function Home() {
                       </a>
                     </div>
                     <div className='col-md-3 col-4 project-div-dsn'>
-                    <a href='/Projectsbycategory/bank' data-aos-delay="1400" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true">
-                      <div className='project-img '>
+                    <a href='/Projectsbycategory/bank'>
+                      <div className='project-img ' data-aos-delay="1400" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true">
                         <img className='img' src={bankImg} />
                         <img className='hoveredImg' src={bankImgHov} />
                         <span >Bank Interior</span>
