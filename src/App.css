@@ -1901,6 +1901,10 @@ h1.quick-link-title {
 .overlay-mobile{
   box-shadow: 0px 0px 0px 0px rgb(135 135 135 / 0%);
 }
+.press-card-dsn .press-card2{
+  background: #cccccc2b;
+  box-shadow: 0px 0px 0px 0px rgba(153, 153, 153, 1) !important;
+}
 @media(min-width:1100px) and (max-width:1441px){
   .main-container{
     padding: 20px 70px;

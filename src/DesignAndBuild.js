@@ -86,13 +86,13 @@ function DesignAndBuild() {
                   
                   <div className="col-md-5 col-4 d-flex flex-column cardspace text-justify right-dsn">
                   <h3 className='right-text-dsn'>Design</h3>
-                    <p className="card-text inter-font" data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-left" data-aos-once="true" data-aos-offset="300">The first and the most important step includes indentifying key requirements of the client. This includes a detailed research on the relevant design,which then leads to sourcing the right materials. This serves as the foundation of any project.</p>
+                    <p className="card-text inter-font" data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-left" data-aos-once="true" data-aos-offset="900">The first and the most important step includes indentifying key requirements of the client. This includes a detailed research on the relevant design,which then leads to sourcing the right materials. This serves as the foundation of any project.</p>
                   </div>
                 </div>
                 <div className='left-section-dsn'>
                 <div className="row row-cols-1 px-2">
                   <div className="col-md-5 col-4 d-flex cardspace text-justify left-dsn">
-                      <p className="card-text inter-font" data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-right" data-aos-once="true" data-aos-offset="300">The second step focuses on the technical and finer aspects of the process. It starts with the developing of technical drawings, which acts as the backbone of the project. The drawings are brought to life by the state of the art, high-tech manufacturing technology.</p>
+                      <p className="card-text inter-font" data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-right" data-aos-once="true" data-aos-offset="900">The second step focuses on the technical and finer aspects of the process. It starts with the developing of technical drawings, which acts as the backbone of the project. The drawings are brought to life by the state of the art, high-tech manufacturing technology.</p>
                                   
                       <h3 className='left-text-dsn' >Develop</h3>
                   </div>
@@ -110,7 +110,7 @@ function DesignAndBuild() {
                     </div>
                     <div className="col col-lg-7 col-md-12 mt-3  d-flex  flex-column cardspace text-justify">
                     <h3  style={{ fontSize: "2.3rem", fontWeight:"400", textTransform:"uppercase" }} >Develop</h3>
-                      <p className="card-text mobile-card" data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-right" data-aos-once="true" data-aos-offset="300">The second step focuses on the technical and finer aspects of the process. It starts with the developing of technical drawings, which acts as the backbone of the project. The drawings are brought to life by the state of the art, high-tech manufacturing technology.</p>
+                      <p className="card-text mobile-card" data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-right" data-aos-once="true" data-aos-offset="900">The second step focuses on the technical and finer aspects of the process. It starts with the developing of technical drawings, which acts as the backbone of the project. The drawings are brought to life by the state of the art, high-tech manufacturing technology.</p>
                     </div>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ function DesignAndBuild() {
                  
                   <div className="col-md-5 col-4 d-flex flex-column cardspace text-justify right-dsn">
                   <h3  className='right-text-dsn'>Deliver</h3>
-                    <p className="card-text inter-font" data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-left" data-aos-once="true" data-aos-offset="300">The final step includes efficient on-site execution, giving special attention to quality control. The completed projects is then handed over to the client in a timely manner.</p>
+                    <p className="card-text inter-font" data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-left" data-aos-once="true" data-aos-offset="900">The final step includes efficient on-site execution, giving special attention to quality control. The completed projects is then handed over to the client in a timely manner.</p>
                   </div>
                 </div>
 

@@ -113,7 +113,7 @@ function Home() {
       <LeftContainer />
       <div className='smoothScroll-container'  >
         <div className='margin-container' >
-          <div className="player-container player-custom-dsn">
+          <div className="player-container player-custom-dsn" data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true">
             {!videoLoaded && (
               <div>
                 <OverlayNav />
@@ -450,6 +450,24 @@ function Home() {
                       <img src={press3Img} />
                       <div className='card-content'>
                         <p>Narsi Kularia, founder of the Narsi Group, a one-stop, Pan-India interior turnkey fit-out service provider, established the company in 1986... </p>
+                        <a> <h6 className='text-uppercase'> Read more</h6></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='col-md-4 col-4 press-card-dsn'>
+                    <div className='press-card2'>
+                      <img src={press3Img} />
+                      <div className='card-content'>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since... </p>
+                        <a> <h6 className='text-uppercase'> Read more</h6></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='col-md-4 col-4 press-card-dsn'>
+                    <div className='press-card2'>
+                      <img src={press3Img} />
+                      <div className='card-content'>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since... </p>
                         <a> <h6 className='text-uppercase'> Read more</h6></a>
                       </div>
                     </div>
