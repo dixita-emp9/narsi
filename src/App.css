@@ -1912,6 +1912,24 @@ h1.quick-link-title {
   width: 23%;
   opacity: 1;
 }
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it appears above other elements */
+  background-color: #fff; /* Add a background color to prevent content from showing through */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Add a shadow for visual distinction */
+}
+
+.overlay {
+  /* Ensure overlay still covers the whole screen */
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999; /* Ensure it's below the header */
+}
 @media(min-width:1100px) and (max-width:1441px){
   .main-container{
     padding: 20px 70px;
