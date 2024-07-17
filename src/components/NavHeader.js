@@ -45,7 +45,7 @@ const OverlayNav = (props) => {
     <div className='container-fluid header'>
       <div className='header-wrapper d-flex justify-content-between align-items-end '>
 
-        <div className='logo-wrapper'>
+        <div className='logo-wrapper' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" >
           <img src={logo} className="logo" alt="logo" />
         </div>
         <div>
