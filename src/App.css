@@ -97,7 +97,7 @@ body {
   vertical-align: middle;
   margin: 22px;
   height: 100%;
-  padding-top: 5%;
+  padding-top: 25%;
   padding-left: 7%;
 }
 
@@ -1256,7 +1256,7 @@ img.rounded-corner-16{
   }
 
   .player-container {
-    height: 600px;
+    height: 500px;
   }
 
   div:has(> video) {
