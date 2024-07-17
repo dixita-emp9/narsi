@@ -1908,9 +1908,13 @@ h1.quick-link-title {
 .project-detail-padding-dsn .carousel-control-next-icon, .project-detail-padding-dsn .carousel-control-prev-icon {
     background-color: #e95424;
 }
-.project-detail-padding-dsn .carousel-control-next, .project-detail-padding-dsn .carousel-control-prev{
-  width: 23%;
+.project-detail-padding-dsn .carousel-control-next{
+  width: 19%; 
   opacity: 1;
+}
+.project-detail-padding-dsn .carousel-control-prev{
+   width: 15%;
+   opacity: 1;
 }
 .header {
   position: fixed;
