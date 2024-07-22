@@ -109,7 +109,7 @@ function AboutUs() {
                   <h4 className='mt-4' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="1100">Our Vision</h4>
                   <p className='inter-font' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="1100">To be a one-stop interior fitout service provider with a global reach with special emphasis on rigorours innovation to deliver premium quality at the best price and to be strong advocates of the 'Make in India' movement.</p>
                 </div>
-                <div className='col-lg-3 col-12  p-0'>
+                <div className='col-lg-3 col-12  p-0' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-right" data-aos-once="true" data-aos-offset="1100">
                   <img src={visionImg} />
                 </div>
               </div>
@@ -122,7 +122,7 @@ function AboutUs() {
                     dedication to provide customer delight and satisfaction, are all powered by our
                     singular focus on adding value through excellence.</p>
                 </div>
-                <div className='col-lg-3 col-12  p-0'>
+                <div className='col-lg-3 col-12  p-0' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="1100">
                   <img src={visionImg} />
                 </div>
               </div>
@@ -132,7 +132,7 @@ function AboutUs() {
                   <p className='inter-font' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="1100">Using innovative methods and latest technology by investing in research and
                     development.</p>
                 </div>
-                <div className='col-lg-3 col-12 p-0'>
+                <div className='col-lg-3 col-12 p-0' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="1100">
                   <img src={strategyImg} />
                 </div>
               </div>
@@ -151,17 +151,17 @@ function AboutUs() {
                   </div>
                 </div>
                 <div className='row manuf-sec leadership'>
-                  <div className='col-lg-4 col-12' data-aos-delay="0" data-aos-duration=" 1400"  data-aos="fade-up" data-aos-once="true" data-aos-offset="1300">
+                  <div className='col-lg-4 col-12' data-aos-delay="100" data-aos-duration=" 1400"  data-aos="fade-up" data-aos-once="true" data-aos-offset="1900">
                     <img className='rounded-corner-16 bordered' src={nkdImg} />
                     <h5 className='text-upper team-title'>Narsi D. Kularia</h5>
                     <p className='text-upper team-occu'>Managing Director</p>
                   </div>
-                  <div className='col-lg-4 col-12' data-aos-delay="200" data-aos-duration=" 1400"  data-aos="fade-up" data-aos-once="true" data-aos-offset="1300">
+                  <div className='col-lg-4 col-12' data-aos-delay="400" data-aos-duration=" 1400"  data-aos="fade-up" data-aos-once="true" data-aos-offset="1900">
                     <img className='rounded-corner-16 bordered' src={jkImg} />
                     <h5 className='text-upper team-title'>Jagdish Kularia</h5>
                     <p className='text-upper team-occu'>Director</p>
                   </div>
-                  <div className='col-lg-4 col-12' data-aos-delay="400" data-aos-duration=" 1400"  data-aos="fade-up" data-aos-once="true" data-aos-offset="1300">
+                  <div className='col-lg-4 col-12' data-aos-delay="700" data-aos-duration=" 1400"  data-aos="fade-up" data-aos-once="true" data-aos-offset="1900">
                     <img className='rounded-corner-16 bordered' src={azImg} />
                     <h5 className='text-upper team-title'>Aathis Zavar</h5>
                     <p className='text-upper team-occu'>CEO</p>
