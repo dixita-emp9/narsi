@@ -1,6 +1,6 @@
 import React, { useEffect ,useState} from 'react';
 import './App.css';
-import { useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import OverlayNav from './components/NavHeader';
 // import newparliamentbuilding3 from './images/newparliamentbuilding/3.jpg'
 // import newparliamentbuilding2 from './images/newparliamentbuilding/2.png'
@@ -55,6 +55,20 @@ function Projectsbycategory() {
   const setNav =(menu)=>{
     setIsOpen(menu)
   }
+ 
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLeave = (e, path) => {
+   
+    e.preventDefault();
+    document.body.classList.remove('static');
+    document.body.classList.remove('aos-animate');
+    document.body.classList.add('loading');
+    setTimeout(() => {
+     navigate(path);
+    }, 1500); // 1500ms delay for the transition effect
+  };
 
   return (
     <div className={`body ${isOpen ? 'open' : ''}`}>
@@ -87,7 +101,7 @@ function Projectsbycategory() {
                     const imgSrc = getImage(proj?.imagePath);
                     const box =imgSrc?
                <div className='category-project-box col-lg-4 col-12'>  
-                <a href={`/projectDetail/${proj.projectId}`}>
+                <a href={`/projectDetail/${proj.projectId}`} onClick={e=>handleLeave(e,`/projectDetail/${proj.projectId}`)}>
                     <img
                      className="d-block w-100"
                      src={imgSrc}
@@ -95,7 +109,7 @@ function Projectsbycategory() {
                    <p className='name'> {proj.projectName}</p>
                    </a>
                   </div> : <div className='category-project-box col-lg-4 col-12'>  
-                <a href={`/projectDetail/${proj.projectId}`}>
+                <a href={`/projectDetail/${proj.projectId}`} onClick={e=>handleLeave(e,`/projectDetail/${proj.projectId}`)}>
                     <img
                      className="d-block w-100"
                      src={noImage}

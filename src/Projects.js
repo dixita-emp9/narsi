@@ -19,6 +19,7 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import LeftContainer from './components/LeftContainer';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function importAll(r) {
   let images = {};
@@ -31,10 +32,35 @@ const clientImages = importAll(require.context('./images/clients', false, /\.(pn
 
 function Projects() {
 
+ 
+  const location = useLocation();
+
   useEffect(() => {
-    AOS.init({
-      duration: 1000, // You can set various options here
-    });
+  
+    document.body.classList.remove('static');
+    document.body.classList.add('loading');
+        const timer = setTimeout(() => {
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [location]);
+
+  const navigate = useNavigate();
+
+  const handleLeave = (e, path) => {
+   
+    e.preventDefault();
+    document.body.classList.remove('static');
+    document.body.classList.add('loading');
+    document.body.classList.remove('aos-animate');
+    setTimeout(() => {
+      navigate(path);
+    }, 1500); // 1500ms delay for the transition effect
+  };
+
+  useEffect(() => {
+    // AOS.init({
+    //   duration: 1000, // You can set various options here
+    // });
   }, []);
 
   const [isOpen,setIsOpen] = useState(false)
@@ -69,77 +95,79 @@ function Projects() {
                     <Tab eventKey="government" title="Government">
                       <div className="tab-pane" id="list-government" role="tabpanel" aria-labelledby="list-government-list">
                         <ul className="list-group list-group-flush">
-                          <li className="list-group-item"> <a href="/projectDetail/1">New Parliament Building- Delhi </a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/2">Vice President Enclave New Delhi </a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/3">Executive Enclave New Delhi </a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/4">ITPO Delhi (Shapoorji Pallonji And Company) </a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/5">Common Ctrl Secretariat New Delhi </a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/1')}  href="/projectDetail/1">New Parliament Building- Delhi </a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/2')}  href="/projectDetail/2">Vice President Enclave New Delhi </a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/3')}  href="/projectDetail/3">Executive Enclave New Delhi </a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/4')}  href="/projectDetail/4">ITPO Delhi (Shapoorji Pallonji And Company) </a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/5')}  href="/projectDetail/5">Common Ctrl Secretariat New Delhi </a> <i className="bi bi-arrow-right"></i></li> 
+                       
+                       
                         </ul>
                       </div>
                     </Tab>
                     <Tab eventKey="corporate" title="Corporate interior">
                       <div className="tab-pane" id="list-corporate" role="tabpanel" aria-labelledby="list-corporate-list">
                         <ul className="list-group list-group-flush">
-                          <li className="list-group-item"> <a href="/projectDetail/6">TCS SEZ Indore</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/7">Amazon Development Centre Pune</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/8">Wipro Limited -(Kodathi) Bangalore</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/9">Google RIO Banglore</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/10">Infosys SDB-8 Pune</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/11">ANSR BMS Hyderabad</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/12">Divyasree Avance Banglore</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/13">DivyaSree Omega Hyderabad</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/14">Cowtown Infotech Service Pvt Ltd Lodha Worli</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/15">Asian Paint Santacruz</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/16">Asian Paint Lower Parel</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/17">Master Card Pune</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/18">Jindal Centre New Delhi</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/19">TCS Ltd PH-1A&1B SP-2 Pune (SEZ)</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/20">Samsung Max Tower  Noida</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/21">Kalaptru Avana Panvel</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/22">E & Y Services Pvt. Ltd. Dadar</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/6')}  href="/projectDetail/6">TCS SEZ Indore</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/7')}  href="/projectDetail/7">Amazon Development Centre Pune</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/8')}  href="/projectDetail/8">Wipro Limited -(Kodathi) Bangalore</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/9')}  href="/projectDetail/9">Google RIO Banglore</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/10')}  href="/projectDetail/10">Infosys SDB-8 Pune</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/11')}  href="/projectDetail/11">ANSR BMS Hyderabad</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/12')}  href="/projectDetail/12">Divyasree Avance Banglore</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/13')}  href="/projectDetail/13">DivyaSree Omega Hyderabad</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/14')}  href="/projectDetail/14">Cowtown Infotech Service Pvt Ltd Lodha Worli</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/15')}  href="/projectDetail/15">Asian Paint Santacruz</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/16')}  href="/projectDetail/16">Asian Paint Lower Parel</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/17')}  href="/projectDetail/17">Master Card Pune</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/18')}  href="/projectDetail/18">Jindal Centre New Delhi</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/19')}  href="/projectDetail/19">TCS Ltd PH-1A&1B SP-2 Pune (SEZ)</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/20')}  href="/projectDetail/20">Samsung Max Tower  Noida</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/21')}  href="/projectDetail/21">Kalaptru Avana Panvel</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/22')}  href="/projectDetail/22">E & Y Services Pvt. Ltd. Dadar</a> <i className="bi bi-arrow-right"></i></li>
                         </ul>
                       </div>
                     </Tab>
                     <Tab eventKey="education" title="Education">
                       <div className="tab-pane " id="list-education" role="tabpanel" aria-labelledby="list-education-list">
                         <ul className="list-group list-group-flush">
-                          <li className="list-group-item"> <a href="/projectDetail/23">AVVP Nursing College Faridabad</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/24">Plaksha Univesity Mohali</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/25">Amrita Vishwa Vidyapeetham University-Amaravati</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/26">NSBUoE Sikkim</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/27">Prerna School Vadnagar</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/23')}  href="/projectDetail/23">AVVP Nursing College Faridabad</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/24')}  href="/projectDetail/24">Plaksha Univesity Mohali</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/25')}  href="/projectDetail/25">Amrita Vishwa Vidyapeetham University-Amaravati</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/26')}  href="/projectDetail/26">NSBUoE Sikkim</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/27')}  href="/projectDetail/27">Prerna School Vadnagar</a> <i className="bi bi-arrow-right"></i></li>
                         </ul>
                       </div>
                     </Tab>
                     <Tab eventKey="hospital" title="Hospital">
                       <div className="tab-pane " id="list-hospital" role="tabpanel" aria-labelledby="list-hospital-list">
                         <ul className="list-group list-group-flush">
-                          <li className="list-group-item"> <a href="/projectDetail/28">Breach Candy Hospital Mumbai</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/29">AIMS Hospital - Faridabad</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/30">Midas Multispecialty Hospital Pvt. Ltd. Nagpur</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/31">Karkinos Healthcare North East Private Iimited</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/32">Advance Veterinary Care Foundation Mumbai </a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/33">Max Hospital Nanavati</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/34">Sant Nirankari Hospital New Delhi</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/28')}  href="/projectDetail/28">Breach Candy Hospital Mumbai</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/29')}  href="/projectDetail/29">AIMS Hospital - Faridabad</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/30')}  href="/projectDetail/30">Midas Multispecialty Hospital Pvt. Ltd. Nagpur</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/31')}  href="/projectDetail/31">Karkinos Healthcare North East Private Iimited</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/32')}  href="/projectDetail/32">Advance Veterinary Care Foundation Mumbai </a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/33')}  href="/projectDetail/33">Max Hospital Nanavati</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/34')}  href="/projectDetail/34">Sant Nirankari Hospital New Delhi</a> <i className="bi bi-arrow-right"></i></li>
                         </ul>
                       </div> </Tab>
                     <Tab eventKey="hotel" title="Hotels">
                       <div className="tab-pane " id="list-industrial" role="tabpanel" aria-labelledby="list-hotels-list">
                         <ul className="list-group list-group-flush">
-                          <li className="list-group-item"> <a href="/projectDetail/35">Brookfield Waterstone Andheri</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/35')}  href="/projectDetail/35">Brookfield Waterstone Andheri</a> <i className="bi bi-arrow-right"></i></li>
                         </ul>
                       </div>
                     </Tab>
                     <Tab eventKey="residential" title="Residential">
                       <div className="tab-pane " id="list-residential" role="tabpanel" aria-labelledby="list-residential-list">
                         <ul className="list-group list-group-flush">
-                          <li className="list-group-item"> <a href="/projectDetail/36">VVR Project New Delhi</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/36')}  href="/projectDetail/36">VVR Project New Delhi</a> <i className="bi bi-arrow-right"></i></li>
                         </ul>
                       </div> </Tab>
                     <Tab eventKey="commercial" title="Exhibition Center">
                       <div className="tab-pane " id="list-commercial" role="tabpanel" aria-labelledby="list-commercial-list">
                         <ul className="list-group list-group-flush">
-                          <li className="list-group-item"> <a href="/projectDetail/37">RRL Swadesh Mumbai Jio Word Centre</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/37')}  href="/projectDetail/37">RRL Swadesh Mumbai Jio Word Centre</a> <i className="bi bi-arrow-right"></i></li>
                         </ul>
                       </div>
                     </Tab>
@@ -147,8 +175,8 @@ function Projects() {
                     <Tab eventKey="bank" title="Bank">
                       <div className="tab-pane " id="list-bank" role="tabpanel" aria-labelledby="list-bank-list">
                         <ul className="list-group list-group-flush">
-                          <li className="list-group-item"> <a href="/projectDetail/38">Kotak Thane 9th Floor</a> <i className="bi bi-arrow-right"></i></li>
-                          <li className="list-group-item"> <a href="/projectDetail/40">Kotak Commadities BKC</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/38')}  href="/projectDetail/38">Kotak Thane 9th Floor</a> <i className="bi bi-arrow-right"></i></li>
+                          <li className="list-group-item"> <a onClick={(e) => handleLeave(e, '/projectDetail/40')}  href="/projectDetail/40">Kotak Commadities BKC</a> <i className="bi bi-arrow-right"></i></li>
                         </ul>
                       </div>
                     </Tab>
@@ -176,65 +204,65 @@ function Projects() {
                           <Tab.Pane eventKey="government1">
                             <div className="tab-pane" role="tabpanel" aria-labelledby="list-government-list">
                               <ul className="list-group list-group-flush">
-                                <li className="list-group-item"> <a href="/projectDetail/1">New Parliament Building- Delhi </a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/2">Vice President Enclave New Delhi </a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/3">Executive Enclave New Delhi </a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/4">ITPO Delhi (Shapoorji Pallonji And Company) </a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/5">Common Ctrl Secretariat New Delhi </a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/1" onClick={e=>handleLeave(e,'/projectDetail/1')}>New Parliament Building- Delhi </a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/2" onClick={e=>handleLeave(e,'/projectDetail/2')}>Vice President Enclave New Delhi </a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/3" onClick={e=>handleLeave(e,'/projectDetail/3')}>Executive Enclave New Delhi </a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/4" onClick={e=>handleLeave(e,'/projectDetail/4')}>ITPO Delhi (Shapoorji Pallonji And Company) </a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/5" onClick={e=>handleLeave(e,'/projectDetail/5')}>Common Ctrl Secretariat New Delhi </a> <i className="bi bi-arrow-right"></i></li>
                               </ul>
                             </div>
                           </Tab.Pane>
                           <Tab.Pane eventKey="corporate">
                             <div className="tab-pane" id="list-corporate" role="tabpanel" aria-labelledby="list-corporate-list">
                               <ul className="list-group list-group-flush">
-                                <li className="list-group-item"> <a href="/projectDetail/6">TCS SEZ Indore</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/7">Amazon Development Centre Pune</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/8">Wipro Limited -(Kodathi) Bangalore</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/9">Google RIO Banglore</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/10">Infosys SDB-8 Pune</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/11">ANSR BMS Hyderabad</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/12">Divyasree Avance Banglore</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/13">DivyaSree Omega Hyderabad</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/14">Cowtown Infotech Service Pvt Ltd Lodha Worli</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/15">Asian Paint Santacruz</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/16">Asian Paint Lower Parel</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/17">Master Card Pune</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/18">Jindal Centre New Delhi</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/19">TCS Ltd PH-1A&1B SP-2 Pune (SEZ)</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/20">Samsung Max Tower  Noida</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/21">Kalaptru Avana Panvel</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/22">E & Y Services Pvt. Ltd. Dadar</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/6" onClick={e=>handleLeave(e,'/projectDetail/6')}>TCS SEZ Indore</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/7" onClick={e=>handleLeave(e,'/projectDetail/7')}>Amazon Development Centre Pune</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/8" onClick={e=>handleLeave(e,'/projectDetail/8')}>Wipro Limited -(Kodathi) Bangalore</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/9" onClick={e=>handleLeave(e,'/projectDetail/9')}>Google RIO Banglore</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/10" onClick={e=>handleLeave(e,'/projectDetail/10')}>Infosys SDB-8 Pune</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/11" onClick={e=>handleLeave(e,'/projectDetail/11')}>ANSR BMS Hyderabad</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/12" onClick={e=>handleLeave(e,'/projectDetail/12')}>Divyasree Avance Banglore</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/13" onClick={e=>handleLeave(e,'/projectDetail/13')}>DivyaSree Omega Hyderabad</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/14" onClick={e=>handleLeave(e,'/projectDetail/14')}>Cowtown Infotech Service Pvt Ltd Lodha Worli</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/15" onClick={e=>handleLeave(e,'/projectDetail/15')}>Asian Paint Santacruz</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/16" onClick={e=>handleLeave(e,'/projectDetail/16')}>Asian Paint Lower Parel</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/17" onClick={e=>handleLeave(e,'/projectDetail/17')}>Master Card Pune</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/18" onClick={e=>handleLeave(e,'/projectDetail/18')}>Jindal Centre New Delhi</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/19" onClick={e=>handleLeave(e,'/projectDetail/19')}>TCS Ltd PH-1A&1B SP-2 Pune (SEZ)</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/20" onClick={e=>handleLeave(e,'/projectDetail/20')}>Samsung Max Tower  Noida</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/21" onClick={e=>handleLeave(e,'/projectDetail/21')}>Kalaptru Avana Panvel</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/22" onClick={e=>handleLeave(e,'/projectDetail/22')}>E & Y Services Pvt. Ltd. Dadar</a> <i className="bi bi-arrow-right"></i></li>
                               </ul>
                             </div>
                           </Tab.Pane>
                           <Tab.Pane eventKey="education">
                             <div className="tab-pane " id="list-education" role="tabpanel" aria-labelledby="list-education-list">
                               <ul className="list-group list-group-flush">
-                                <li className="list-group-item"> <a href="/projectDetail/23">AVVP Nursing College Faridabad</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/24">Plaksha Univesity Mohali</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/25">Amrita Vishwa Vidyapeetham University-Amaravati</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/26">NSBUoE Sikkim</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/27">Prerna School Vadnagar</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/23" onClick={e=>handleLeave(e,'/projectDetail/23')}>AVVP Nursing College Faridabad</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/24" onClick={e=>handleLeave(e,'/projectDetail/24')}>Plaksha Univesity Mohali</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/25" onClick={e=>handleLeave(e,'/projectDetail/25')}>Amrita Vishwa Vidyapeetham University-Amaravati</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/26" onClick={e=>handleLeave(e,'/projectDetail/26')}>NSBUoE Sikkim</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/27" onClick={e=>handleLeave(e,'/projectDetail/27')}>Prerna School Vadnagar</a> <i className="bi bi-arrow-right"></i></li>
                               </ul>
                             </div>
                           </Tab.Pane>
                           <Tab.Pane eventKey="hospital">
                             <div className="tab-pane " id="list-hospital" role="tabpanel" aria-labelledby="list-hospital-list">
                               <ul className="list-group list-group-flush">
-                                <li className="list-group-item"> <a href="/projectDetail/28">Breach Candy Hospital Mumbai</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/29">AIMS Hospital - Faridabad</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/30">Midas Multispecialty Hospital Pvt. Ltd. Nagpur</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/31">Karkinos Healthcare North East Private Iimited</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/32">Advance Veterinary Care Foundation Mumbai </a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/33">Max Hospital Nanavati</a> <i className="bi bi-arrow-right"></i></li>
-                                <li className="list-group-item"> <a href="/projectDetail/34">Sant Nirankari Hospital New Delhi</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/28" onClick={e=>handleLeave(e,'/projectDetail/28')}>Breach Candy Hospital Mumbai</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/29" onClick={e=>handleLeave(e,'/projectDetail/29')}>AIMS Hospital - Faridabad</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/30" onClick={e=>handleLeave(e,'/projectDetail/30')}>Midas Multispecialty Hospital Pvt. Ltd. Nagpur</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/31" onClick={e=>handleLeave(e,'/projectDetail/31')}>Karkinos Healthcare North East Private Iimited</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/32" onClick={e=>handleLeave(e,'/projectDetail/32')}>Advance Veterinary Care Foundation Mumbai </a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/33" onClick={e=>handleLeave(e,'/projectDetail/33')}>Max Hospital Nanavati</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/34" onClick={e=>handleLeave(e,'/projectDetail/34')}>Sant Nirankari Hospital New Delhi</a> <i className="bi bi-arrow-right"></i></li>
                               </ul>
                             </div>
                           </Tab.Pane>
                           <Tab.Pane eventKey="hotels">
                             <div className="tab-pane " id="list-industrial" role="tabpanel" aria-labelledby="list-hotels-list">
                               <ul className="list-group list-group-flush">
-                                <li className="list-group-item"> <a href="/projectDetail/35">Brookfield Waterstone Andheri</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/35" onClick={e=>handleLeave(e,'/projectDetail/35')}>Brookfield Waterstone Andheri</a> <i className="bi bi-arrow-right"></i></li>
                               </ul>
                             </div>
                           </Tab.Pane>
@@ -242,14 +270,14 @@ function Projects() {
                           <Tab.Pane eventKey="residential">
                             <div className="tab-pane " id="list-residential" role="tabpanel" aria-labelledby="list-residential-list">
                               <ul className="list-group list-group-flush">
-                                <li className="list-group-item"> <a href="/projectDetail/36">VVR Project New Delhi</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/36" onClick={e=>handleLeave(e,'/projectDetail/36')}>VVR Project New Delhi</a> <i className="bi bi-arrow-right"></i></li>
                               </ul>
                             </div>
                           </Tab.Pane>
                           <Tab.Pane eventKey="commercial">
                             <div className="tab-pane " id="list-commercial" role="tabpanel" aria-labelledby="list-commercial-list">
                               <ul className="list-group list-group-flush">
-                                <li className="list-group-item"> <a href="/projectDetail/37">RRL Swadesh Mumbai Jio Word Centre</a> <i className="bi bi-arrow-right"></i></li>
+                                <li className="list-group-item"> <a href="/projectDetail/37" onClick={e=>handleLeave(e,'/projectDetail/37')}>RRL Swadesh Mumbai Jio Word Centre</a> <i className="bi bi-arrow-right"></i></li>
                               </ul>
                             </div>
                           </Tab.Pane>

@@ -1,7 +1,7 @@
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
+  Route
 } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
@@ -20,8 +20,11 @@ import AwardsAndTestimonials from "./AwardsAndTestimonials";
 import Testimonials from "./Testimonials";
 import Awards from "./Awards";
 import Career from "./Career";
+import { useEffect } from "react";
+
 
 function App() {
+
   return (
     <div id="app" className="App">
       <Router>

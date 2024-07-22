@@ -1,7 +1,7 @@
 import React, { useEffect ,useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import OverlayNav from './components/NavHeader';
 // import newparliamentbuilding3 from './images/newparliamentbuilding/3.jpg'
 // import newparliamentbuilding2 from './images/newparliamentbuilding/2.png'
@@ -23,6 +23,8 @@ import LeftContainer from './components/LeftContainer';
 
 function ProjectDetail() {
   let { id } = useParams();
+  
+  const location = useLocation();
   const project = projectData.find(item => item.projectId === id);
   const [projectImages, setProjectImages] = useState([]);
 
@@ -33,11 +35,24 @@ function ProjectDetail() {
     return Object.values(images);
   }
 
+  
+  useEffect(() => {
+  
+      document.body.classList.remove('static');
+      document.body.classList.remove('aos-animate');
+        const timer = setTimeout(() => {
+             document.body.classList.add('aos-animate');
+             document.body.classList.remove('loading');
+           
+    }, 500);
+    return () => clearTimeout(timer);
+
+  }, [project]);
+
+
   useEffect(() => {
 
-    AOS.init({
-      duration: 1000, // You can adjust this duration as needed
-    });
+   
 
     const fetchImages = async () => {
       if (project) {
