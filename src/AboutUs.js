@@ -122,7 +122,7 @@ function AboutUs() {
                     dedication to provide customer delight and satisfaction, are all powered by our
                     singular focus on adding value through excellence.</p>
                 </div>
-                <div className='col-lg-3 col-12  p-0' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="1100">
+                <div className='col-lg-3 col-12  p-0' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-right" data-aos-once="true" data-aos-offset="1100">
                   <img src={visionImg} />
                 </div>
               </div>
@@ -132,7 +132,7 @@ function AboutUs() {
                   <p className='inter-font' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="1100">Using innovative methods and latest technology by investing in research and
                     development.</p>
                 </div>
-                <div className='col-lg-3 col-12 p-0' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="1100">
+                <div className='col-lg-3 col-12 p-0' data-aos-delay="200" data-aos-duration=" 1400" data-aos="fade-right" data-aos-once="true" data-aos-offset="1100">
                   <img src={strategyImg} />
                 </div>
               </div>
