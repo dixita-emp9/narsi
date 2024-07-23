@@ -1,55 +1,57 @@
+import logo from './logo.svg';
+import './App.css';
 import React, { useState, useEffect } from 'react';
 import OverlayNav from './components/NavHeader';
-import homebanner from './images/home.jpg';
-import corporateImg from './images/corporate.png';
-import educationImg from './images/educational.png';
-import hospitalImg from './images/hospital.svg';
-import industrialImg from './images/industrial.png';
-import civilImg from './images/civil.png';
-import residentailImg from './images/residential.png';
-import commercialImg from './images/commercial.png';
-import healthcareImg from './images/healthcare.png';
-import bankImg from './images/bank.png';
+import homebanner from './images/home.jpg'
+import corporateImg from './images/corporate.png'
+import educationImg from './images/educational.png'
+import hospitalImg from './images/hospital.svg'
+import industrialImg from './images/industrial.png'
+import civilImg from './images/civil.png'
+import residentailImg from './images/residential.png'
+import commercialImg from './images/commercial.png'
+import healthcareImg from './images/healthcare.png'
+import bankImg from './images/bank.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import corporateImgHov from './images/corporate-hover.jpg';
-import educationImgHov from './images/educational-hover.jpg';
-import hospitalImgHov from './images/hospital.svg';
-import industrialImgHov from './images/industrial-hover.jpg';
-import civilImgHov from './images/civic-hover.jpg';
-import residentailImgHov from './images/residential-hover.jpg';
-import govtImgHov from './images/commercial-hover.jpg';
-import healthcareImgHov from './images/healthcare-hover.jpg';
-import bankImgHov from './images/bank-hover.jpg';
+import corporateImgHov from './images/corporate-hover.jpg'
+import educationImgHov from './images/educational-hover.jpg'
+import hospitalImgHov from './images/hospital.svg'
+import industrialImgHov from './images/industrial-hover.jpg'
+import civilImgHov from './images/civic-hover.jpg'
+import residentailImgHov from './images/residential-hover.jpg'
+import govtImgHov from './images/commercial-hover.jpg'
+import healthcareImgHov from './images/healthcare-hover.jpg'
+import bankImgHov from './images/bank-hover.jpg'
 
 import Marquee from "react-fast-marquee";
 import Footer from './components/Footer';
 import { InstagramEmbed } from 'react-social-media-embed';
 
-import press1Img from './images/press1.jpg';
-import press2Img from './images/press2.jpg';
-import press3Img from './images/press3.jpg';
-import press4Img from './images/press4.jpg';
-import press5Img from './images/press5.jpg';
-import press6Img from './images/press6.jpg';
+import press1Img from './images/press1.jpg'
+import press2Img from './images/press2.jpg'
+import press3Img from './images/press3.jpg'
+import press4Img from './images/press4.jpg'
+import press5Img from './images/press5.jpg'
+import press6Img from './images/press6.jpg'
 import SmoothScroll from "./SmoothScroll";
 import SmoothHScroll from './SmoothHScroll';
-import homeVideo from './videos/parliament.mp4';
-import itpoVideo from './videos/itpo.mp4';
-import JSWVideo from './videos/JSW.mp4';
-import G20Video from './videos/G-20Room.mp4';
+import homeVideo from './videos/parliament.mp4'
+import itpoVideo from './videos/itpo.mp4'
+import JSWVideo from './videos/JSW.mp4'
+import G20Video from './videos/G-20Room.mp4'
 
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 // import { Carousel } from 'react-responsive-carousel';
-import Carousel from 'react-bootstrap/Carousel';
-//import ReactPlayer from 'react-player';
-import ReactPlayer from 'react-player/lazy';
+import Carousel from 'react-bootstrap/Carousel'
+//import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player/lazy'
 import LeftContainer from './components/LeftContainer';
 import InstaFeeds from './InstaFeeds';
 // import 'animate.css';
 
-import projImg from './images/project-image.jpg';
+import projImg from './images/project-image.jpg'
 
 function importAll(r) {
   let images = {};
@@ -69,13 +71,13 @@ const CountUpAnimation = ({
   const duration = timeout;
 
   useEffect(() => {
+    
     AOS.init({
       duration: 1000, // You can adjust this duration as needed
     });
     let startValue = initialValue;
     const interval = Math.floor(
-      duration / (targetValue - initialValue)
-    );
+      duration / (targetValue - initialValue));
 
     const counter = setInterval(() => {
       startValue += 1;
@@ -97,22 +99,13 @@ const CountUpAnimation = ({
   );
 };
 
+
 function Home() {
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [clickedProject, setClickedProject] = useState(null);
-
-  const setNav = (menu) => {
-    setIsOpen(menu);
-  };
-
-  const handleProjectClick = (project) => {
-    if (clickedProject === project) {
-      window.location.href = `/Projectsbycategory/${project}`;
-    } else {
-      setClickedProject(project);
-    }
-  };
+  const [isOpen,setIsOpen] = useState(false)
+  const setNav =(menu)=>{
+    setIsOpen(menu)
+  }
   return (
     <div className={`body ${isOpen ? 'open' : ''}`}>
       {/* <SmoothScroll /> */}
@@ -283,7 +276,7 @@ function Home() {
               </div>
             </div>
 
-            <div className='row justify-content-center section desktop-project-dsn'>
+            <div className='row justify-content-center section'>
               <div className='col-12'>
                 <h1 className='mt-5 mb-5 project-title-dsn' data-aos="fade-up" data-aos-once="true" data-aos-offset="300">Project</h1>
                 <div className=''>
@@ -373,161 +366,6 @@ function Home() {
 
               </div>
             </div>
-
-{/* *-------------------------------------------------------------------------------------------------------------------* */}
-
-              <div className='col-12 mobile-project-dsn'>
-                <h1 className="custom-heading about-dsn" data-aos="fade-up" data-aos-once="true">Project</h1>
-                <div className='row justify-content-center'>
-                  <div className='col-lg-2 col-6'>
-                    <div
-                      className='project-list-container'
-                      data-aos="fade-up"
-                      data-aos-once="true"
-                      onClick={() => handleProjectClick('corporate')}
-                    >
-                      <div className='project-img-container'>
-                        <img
-                          src={clickedProject === 'corporate' ? corporateImgHov : corporateImg}
-                          alt='corporate'
-                        />
-                      </div>
-                      <h3 className='project-title'>Corporate Interior</h3>
-                    </div>
-                  </div>
-                  <div className='col-lg-2 col-6'>
-                    <div
-                      className='project-list-container'
-                      data-aos="fade-up"
-                      data-aos-once="true"
-                      onClick={() => handleProjectClick('education')}
-                    >
-                      <div className='project-img-container'>
-                        <img
-                          src={clickedProject === 'education' ? educationImgHov : educationImg}
-                          alt='education'
-                        />
-                      </div>
-                      <h3 className='project-title'>Education Institute</h3>
-                    </div>
-                  </div>
-                  <div className='col-lg-2 col-6'>
-                    <div
-                      className='project-list-container'
-                      data-aos="fade-up"
-                      data-aos-once="true"
-                      onClick={() => handleProjectClick('civil')}
-                    >
-                      <div className='project-img-container'>
-                        <img
-                          src={clickedProject === 'civil' ? civilImgHov : civilImg}
-                          alt='civil'
-                        />
-                      </div>
-                      <h3 className='project-title'>Civic Interior</h3>
-                    </div>
-                  </div>
-                  <div className='col-lg-2 col-6'>
-                    <div
-                      className='project-list-container'
-                      data-aos="fade-up"
-                      data-aos-once="true"
-                      onClick={() => handleProjectClick('industrial')}
-                    >
-                      <div className='project-img-container'>
-                        <img
-                          src={clickedProject === 'industrial' ? industrialImgHov : industrialImg}
-                          alt='industrial'
-                        />
-                      </div>
-                      <h3 className='project-title'>Industrial Interior</h3>
-                    </div>
-                  </div>
-                  <div className='col-lg-2 col-6'>
-                    <div
-                      className='project-list-container'
-                      data-aos="fade-up"
-                      data-aos-once="true"
-                      onClick={() => handleProjectClick('residential')}
-                    >
-                      <div className='project-img-container'>
-                        <img
-                          src={clickedProject === 'residential' ? residentailImgHov : residentailImg}
-                          alt='residential'
-                        />
-                      </div>
-                      <h3 className='project-title'>Residential Interior</h3>
-                    </div>
-                  </div>
-                  <div className='col-lg-2 col-6'>
-                    <div
-                      className='project-list-container'
-                      data-aos="fade-up"
-                      data-aos-once="true"
-                      onClick={() => handleProjectClick('government')}
-                    >
-                      <div className='project-img-container'>
-                        <img
-                          src={clickedProject === 'government' ? govtImgHov : commercialImg}
-                          alt='government'
-                        />
-                      </div>
-                      <h3 className='project-title'>Government Interior</h3>
-                    </div>
-                  </div>
-                  <div className='col-lg-2 col-6'>
-                    <div
-                      className='project-list-container'
-                      data-aos="fade-up"
-                      data-aos-once="true"
-                      onClick={() => handleProjectClick('hospital')}
-                    >
-                      <div className='project-img-container'>
-                        <img
-                          src={clickedProject === 'hospital' ? healthcareImgHov : healthcareImg}
-                          alt='hospital'
-                        />
-                      </div>
-                      <h3 className='project-title'>Healtcare Interior</h3>
-                    </div>
-                  </div>
-                  <div className='col-lg-2 col-6'>
-                    <div
-                      className='project-list-container'
-                      data-aos="fade-up"
-                      data-aos-once="true"
-                      onClick={() => handleProjectClick('bank')}
-                    >
-                      <div className='project-img-container'>
-                        <img
-                          src={clickedProject === 'bank' ? bankImgHov : bankImg}
-                          alt='bank'
-                        />
-                      </div>
-                      <h3 className='project-title'>Bank Interior</h3>
-                    </div>
-                  </div>
-                  {/* <div className='col-lg-2 col-6'>
-                    <div
-                      className='project-list-container'
-                      data-aos="fade-up"
-                      data-aos-once="true"
-                      onClick={() => handleProjectClick('bank')}
-                    >
-                      <div className='project-img-container'>
-                        <img
-                          src={clickedProject === 'bank' ? bankImgHov : bankImg}
-                          alt='bank'
-                        />
-                      </div>
-                      <h3 className='project-title'>Bank</h3>
-                    </div>
-                  </div> */}
-                </div>
-              </div>
-{/* *-------------------------------------------------------------------------------------------------------------------* */}
-
-
             <div className='row  justify-content-center section'>
               <div className='col-12 position-relative'>
                 <h1 className='mt-5 mb-5 pb-4 clients-title-dsn' data-aos="fade-up" data-aos-once="true" data-aos-offset="300">Clients</h1>
