@@ -61,17 +61,17 @@ function DesignAndBuild() {
           <div className='container-fluid bg-wood '>
             <div className='row bg-orange bg-wood  section pb-5 text-center'>
               <div className='p-3 mb-3 wood-para-dsn' >
-                <p className='inter-font' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="300">Skills processed by our team to effectively build multi-phase projects</p>
+                <p className='inter-font' data-aos-delay="0" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true" data-aos-offset="900">Skills processed by our team to effectively build multi-phase projects</p>
               </div>
               <div className='row text-center'>
                 <div className='col-lg-4'>
-                  <h5 className='text-uppercase wood-three-text' data-aos-delay="0" data-aos-duration=" 1400" data-aos="zoom-in" data-aos-once="true" data-aos-offset="300">Excellent Management Skills</h5>
+                  <h5 className='text-uppercase wood-three-text' data-aos-delay="0" data-aos-duration=" 1400" data-aos="zoom-in" data-aos-once="true" data-aos-offset="900">Excellent Management Skills</h5>
                 </div>
                 <div className='col-lg-4'>
-                  <h5 className='text-uppercase wood-three-text' data-aos-delay="0" data-aos-duration=" 1400" data-aos="zoom-in" data-aos-once="true" data-aos-offset="300">High Technical knowledge</h5>
+                  <h5 className='text-uppercase wood-three-text' data-aos-delay="0" data-aos-duration=" 1400" data-aos="zoom-in" data-aos-once="true" data-aos-offset="900">High Technical knowledge</h5>
                 </div>
                 <div className='col-lg-4'>
-                  <h5 className='text-uppercase wood-three-text' data-aos-delay="0" data-aos-duration=" 1400" data-aos="zoom-in" data-aos-once="true" data-aos-offset="300">Key decision-making</h5>
+                  <h5 className='text-uppercase wood-three-text' data-aos-delay="0" data-aos-duration=" 1400" data-aos="zoom-in" data-aos-once="true" data-aos-offset="900">Key decision-making</h5>
                 </div>
               </div>
             </div>
