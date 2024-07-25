@@ -308,7 +308,7 @@ function Home() {
                       </a>
                     </div>
                     <div className='col-md-3 col-4 project-div-dsn'>
-                    <a href='/Projectsbycategory/civil'>
+                    <a href='/Projectsbycategory/Exhibition'>
                       <div className='project-img' data-aos-delay="400" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true"> 
                         <img  className='img'src={civilImg} />
                         <img className='hoveredImg' src={civilImgHov} />
@@ -317,7 +317,7 @@ function Home() {
                       </a>
                     </div>
                     <div className='col-md-3 col-4 project-div-dsn'>
-                    <a href='/Projectsbycategory/industrial'>
+                    <a href='/Projectsbycategory/Exhibition'>
                       <div className='project-img ' data-aos-delay="600" data-aos-duration=" 1400" data-aos="fade-up" data-aos-once="true">
                         <img className='img' src={industrialImg} />
                         <img className='hoveredImg' src={industrialImgHov} />
@@ -384,7 +384,7 @@ function Home() {
                       className='project-list-container'
                       data-aos="fade-up"
                       data-aos-once="true"
-                      onClick={() => handleProjectClick('corporate')}
+                      onClick={() => handleProjectClick('commercial')}
                     >
                       <div className='project-img-container'>
                         <img
@@ -416,7 +416,7 @@ function Home() {
                       className='project-list-container'
                       data-aos="fade-up"
                       data-aos-once="true"
-                      onClick={() => handleProjectClick('civil')}
+                      onClick={() => handleProjectClick('Exhibition')}
                     >
                       <div className='project-img-container'>
                         <img
@@ -432,7 +432,7 @@ function Home() {
                       className='project-list-container'
                       data-aos="fade-up"
                       data-aos-once="true"
-                      onClick={() => handleProjectClick('industrial')}
+                      onClick={() => handleProjectClick('Exhibition')}
                     >
                       <div className='project-img-container'>
                         <img
